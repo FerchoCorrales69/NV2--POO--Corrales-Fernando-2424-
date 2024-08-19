@@ -1,4 +1,12 @@
+# Función para mostrar el título y subtítulo
+def mostrar_titulo():
+    print("========================================")
+    print("        UNIVERSIDAD ESTATAL AMAZÓNICA    ")
+    print("========================================")
+    print("Nombre: Fernando Corrales")
+    print("========================================\n")
 
+# Clase Producto
 class Producto:
     def __init__(self, id_producto, nombre, cantidad, precio):
         self.id_producto = id_producto
@@ -33,6 +41,7 @@ class Producto:
         return f'ID: {self.id_producto}, Nombre: {self.nombre}, Cantidad: {self.cantidad}, Precio: {self.precio}'
 
 
+# Clase Inventario
 class Inventario:
     def __init__(self):
         self.productos = []
@@ -83,6 +92,7 @@ class Inventario:
             print("No hay productos en el inventario.")
 
 
+# Función para mostrar el menú
 def mostrar_menu():
     print("\n--- Menú de Gestión de Inventario ---")
     print("1. Añadir nuevo producto")
@@ -93,7 +103,9 @@ def mostrar_menu():
     print("6. Salir")
 
 
+# Función principal del programa
 def main():
+    mostrar_titulo()
     inventario = Inventario()
 
     while True:
@@ -145,7 +157,6 @@ def main():
             print("Opción no válida. Por favor, intente de nuevo.")
 
 
+# Ejecución del programa
 if __name__ == "__main__":
     main()
-
-
